@@ -1,0 +1,21 @@
+services:
+  ubot:
+    build: .
+    container_name: prosto-ubot
+    restart: unless-stopped
+    env_file:
+      - ./data/.env
+    environment:
+      DATA_DIR: /data
+      DATABASE_PATH: /data/ubot.db
+    volumes:
+      - ./data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 512M

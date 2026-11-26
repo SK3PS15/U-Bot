@@ -1,3 +1,4 @@
+![U-Bot — обложка проекта](U-Bot_logo.JPG)
 <div align="center">
 
 # U-Bot
